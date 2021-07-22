@@ -11,9 +11,7 @@ function showTime() {
     min = today.getMinutes(),
     sec = today.getSeconds();
 
-  const amPm = hour >= 12 ? 'PM' : 'AM';
-
-  hour = hour % 12 || 12;
+  hour = hour % 12 || 24;
 
   time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(
     sec
